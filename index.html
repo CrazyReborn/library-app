@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="scripts.js" defer  ></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Library:</h1>
+        <button id="add-book">Add New Book</button>
+        <div id='books'>
+        </div>
+        <div id="overlay">
+            <form>
+                <label for="book-title">Book Title</label>
+                <br>
+                <input type="text" id="book-title" name="book-title">
+                <br>
+                <label for="book-author">Book Author</label>
+                <br>
+                <input type="text" id="book-author" name="book-author">
+                <br>
+                <label for="book-pages">Number Of Pages</label>
+                <br>
+                <input type="text" id="book-pages" name="book-pages">
+                <br>
+                <br>
+                <div>
+                    <p>Read Status</p>
+                    <input type="radio" class="book-status" id="book-status-nry" name="book-status-choice" value="not read yet">
+                    <label for="book-status-nry">Not read yet</label>
+                    <input type="radio" class="book-status" id="book-status-ar" name="book-status-choice" value="already read">
+                    <label for="book-status-ar">Already read</label>
+                   
+                <br>
+            </div>
+                <input type="submit" id="submit">Submit
+                <button id="cancel">Cancel</button>
+            </form>
+        </div>
+    </body>
+</html>
