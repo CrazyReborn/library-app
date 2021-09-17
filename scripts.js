@@ -1,13 +1,15 @@
-function book() {
-    this.title = null,
-    this.author = null,
-    this.pages = null,
-    this.readStatus = null
-};
-
-book.prototype.info = function() {
-    return `${this.title} by ${this.author}, ${this.pages} pages, ${this.readStatus}.`
+class Book {
+    constructor (title, author, pages, readStatus) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.readStatus = readStatus;
+    }
+    info() {
+        return `${this.title} by ${this.author}, ${this.pages} pages, ${this.readStatus}.`
+    }
 }
+
 
 let myLibrary = [];
 
@@ -93,7 +95,3 @@ buttonsChangeStatus.forEach(e => {
 }
 
 libraryUpdate();
-
-
-
-
