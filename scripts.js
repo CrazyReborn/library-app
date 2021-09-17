@@ -8,23 +8,15 @@ class Book {
     info() {
         return `${this.title} by ${this.author}, ${this.pages} pages, ${this.readStatus}.`
     }
-}
+};
 
 
 let myLibrary = [];
 
-const theHobbit = Object.create(book.prototype);
-theHobbit.title = 'The Hobbit';
-theHobbit.author = 'J.R.R. Tolkien'; 
-theHobbit.pages = 295;
-theHobbit.readStatus = 'already read';
+const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 295, 'already read');
 myLibrary.push(theHobbit);
 
-const theHobbit2 = Object.create(book.prototype);
-theHobbit2.title = 'The Hobbit2';
-theHobbit2.author = 'J.R.R. Tolkien2';
-theHobbit2.pages = 2952;
-theHobbit2.readStatus = 'not read yet';
+const theHobbit2 = new Book('The Hobbit2', 'J.R.R. Tolkien2', 292, 'already read');
 myLibrary.push(theHobbit2);
 
 const bookList = document.getElementById('books');
@@ -41,7 +33,7 @@ buttonCancel.addEventListener('click', e => {
 
 const buttonSubmit = document.getElementById('submit');                          
 buttonSubmit.addEventListener('click', e => {
-    const newBook = Object.create(book.prototype);
+    const newBook = new Book();
     newBook.title = document.getElementById('book-title').value;
     newBook.author = document.getElementById('book-author').value;
     newBook.pages = document.getElementById('book-pages').value;
